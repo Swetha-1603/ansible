@@ -2,7 +2,7 @@
   hosts: localhost
   vars_prompt:
   - name: number
-    promtpt: Please enter number
+    prompt: Please enter number
     private: no
   tasks:
   - name: number is less than 10
