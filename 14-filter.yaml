@@ -35,7 +35,10 @@
         Course: Ansbile
         Trainer: Shivakumar
         Duration: 120hr
-    ansible.builtin.debug:
-      msg: "Before convert: {{my_dict}}"
-    ansible.builtin.debug:
-      msg: "After convert : {{my_dict | dict2items}}"
+    tasks:
+    - name: before convert
+      ansible.builtin.debug:
+        msg: "Before convert: {{my_dict}}"
+    - name: after convert
+      ansible.builtin.debug:
+        msg: "After convert : {{my_dict | dict2items}}"
