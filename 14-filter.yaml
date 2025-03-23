@@ -22,3 +22,19 @@
       numbers: [1,1,2,3,4,4,5]
     ansible.builtin.debug:
       msg: "{{numbers | unique}}"
+
+  - name: print min and max
+    vars:
+      ages: [25, 32, 60, 88]
+    ansible.builtin.debug:
+      msg: "min age: {{ages | min}}, max age: {{ages | max}}"
+
+  - name: covert dictionary into items/list
+    vars:
+      my_dict: 
+        Course: Ansbile
+        Trainer: Shivakumar
+        Duration: 120hr
+    ansible.builtin.debug:
+      msg: "Before convert: {{my_dict}}"
+      msg: "After convert : {{my_dict | dict2items}}"
