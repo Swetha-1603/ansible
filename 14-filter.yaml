@@ -10,3 +10,15 @@
       greeting: "Hello, Good morning"
     ansible.builtin.debug:
       msg: "{{greeting | upper}}"
+  
+  - name: lower case
+    vars:
+      greeting: "Hello, Good morning"
+    ansible.builtin.debug:
+      msg: "{{greeting | lower}}"
+
+  - name: remove duplicates
+    vars:
+      numbers: [1,1,2,3,4,4,5]
+    ansible.builtin.debug:
+      msg: "{{numbers | unique}}"
