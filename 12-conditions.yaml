@@ -12,9 +12,9 @@
         msg: "user info: {{USER}}"
 
     - name: create user
-      ansible.buildin.command: useradd expense
+      ansible.builtin.command: useradd expense
       when: USER.rc != 0 # condition
 
     - name: say hello
-      ansible.buildin.debug:
+      ansible.builtin.debug:
         msg: "say hello"
